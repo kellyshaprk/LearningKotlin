@@ -1,9 +1,80 @@
-val myName = "Kelly"
+import kotlin.math.*
+
+// import java.lang.Math.abs
+// import java.lang.Math.round
+
+//val myName = "Kelly"
 // [val or var]  identifier: (data Type) = initial value
 
 fun main(args: Array<String>) {
-    var num1 = 10
-    val num2 = 15
+    var aString = "Hello"
+
+    println(aString)
+
+    //val empty = String()
+    //println("'$empty'")
+
+    //var charArray = aString.toCharArray()
+    //println(charArray.toList())
+
+    //var byteArray = aString.toByteArray()
+    //println(byteArray.toList())
+
+    aString += " and Welcome"
+    println(aString)
+/*
+    val len = aString.length
+    for (i in 0 until len) {
+        val c = aString.get(i)
+        println(c)
+    }
+*/
+    val p = aString.indexOf("W")
+    println(p)
+    val sub = aString.substring(p)
+    println(sub)
+
+    val aString2 = aString
+    var match = aString.equals(aString2)
+    println(match) // kotlin은 primitive type이 없고 class만 있다고 했던듯? 그래서인지 결과는 true로 나옴... 오호!?
+
+    val aString3 = aString.toUpperCase()
+    match = aString.equals(aString3)
+    println(match) // false: uppercase니까
+
+    val aString4 = aString.toUpperCase()
+    match = aString.equals(aString4, true)
+    println(match) // true: ignoreCase
+
+
+
+
+    /*
+    var num1 = 15
+    val num2 = 10
+    val sum:Int = num1.plus(num2)
+    println("sum = $sum")
+
+    val difference = num1.minus(num2)
+    println("difference = $difference")
+
+    val product = num1.times(num2)
+    println("product = $product")
+
+    val quotient = num1.toDouble().div(num2)
+    println("quotient = $quotient")
+
+    val reminder = num1.rem(num2)
+    println("reminder = $reminder")
+
+    val neg = -15.2
+    val ab = abs(neg) // or Math.abs when using Java functions
+    println("absolute = $ab")
+    println("rounded = ${round(ab)}")
+
+    println("Have a piece of $PI")
+
+
 
     val sum = num1 + num2
     println("sum = $sum")
@@ -23,7 +94,7 @@ fun main(args: Array<String>) {
 
 
 
-    /*
+
 
     val match: Boolean = (num1 == num2)
     println("Match = $match")
