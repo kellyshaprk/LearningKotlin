@@ -1,23 +1,21 @@
+import java.lang.NumberFormatException
+
 fun main(args: Array<String>) {
-    val states = arrayOf("CA", "KR", "NA")
+    try {
+        print("Value1: ")
+        val value1:String? = readLine()
+        val d1 = value1!!.toDouble()
 
-    var counter = 0
-/*    while(counter < states.size) {
-        println("counter = $counter")
-        println("state = ${states.get(counter)}")
-        counter ++
+        print("Value2: ")
+        val value2:String? = readLine()
+        val d2 = value2!!.toDouble()
+
+        val sum = d1 + d2
+        println("Answer: $sum")
+    } catch (e:KotlinNullPointerException) { //catch (e: java.lang.NullPointerException)
+        println("Value was null")
+    } catch (e:NumberFormatException) {
+        println("${e.message} is not a number")
     }
-    */
-    counter = 0
-    printHeader(" Do / While loop")
-    do {
-        println("states = ${states.get(counter)}")
-        counter ++
-    } while(counter < states.size)
 }
 
-fun printHeader(label: String) {
-    println("**************")
-    println(label)
-    println("**************")
-}
